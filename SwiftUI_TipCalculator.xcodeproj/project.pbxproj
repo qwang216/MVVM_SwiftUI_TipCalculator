@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510F5FD323688B18001DC375 /* TipCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510F5FD223688B18001DC375 /* TipCalculatorViewModel.swift */; };
 		D4ED6D30236808A400D5D7B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED6D2F236808A400D5D7B2 /* AppDelegate.swift */; };
 		D4ED6D32236808A400D5D7B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED6D31236808A400D5D7B2 /* SceneDelegate.swift */; };
 		D4ED6D34236808A400D5D7B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ED6D33236808A400D5D7B2 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		510F5FD223688B18001DC375 /* TipCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorViewModel.swift; sourceTree = "<group>"; };
 		D4ED6D2C236808A400D5D7B2 /* SwiftUI_TipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_TipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4ED6D2F236808A400D5D7B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4ED6D31236808A400D5D7B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				D4ED6D3A236808A700D5D7B2 /* LaunchScreen.storyboard */,
 				D4ED6D3D236808A700D5D7B2 /* Info.plist */,
 				D4ED6D37236808A700D5D7B2 /* Preview Content */,
+				510F5FD223688B18001DC375 /* TipCalculatorViewModel.swift */,
 			);
 			path = SwiftUI_TipCalculator;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				D4ED6D30236808A400D5D7B2 /* AppDelegate.swift in Sources */,
 				D4ED6D32236808A400D5D7B2 /* SceneDelegate.swift in Sources */,
+				510F5FD323688B18001DC375 /* TipCalculatorViewModel.swift in Sources */,
 				D4ED6D34236808A400D5D7B2 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -374,7 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JasonWang.SwiftUI-TipCalculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -394,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JasonWang.SwiftUI-TipCalculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
