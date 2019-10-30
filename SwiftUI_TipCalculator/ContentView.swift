@@ -12,19 +12,19 @@ struct ContentView: View {
     @State private var tipPercentage = 0
     @State private var totalAmount: String = ""
     let tipPercentagesArray = [0, 10, 15, 20, 25]
-
+    
     // Initialize MVVM object here like so
-    // @ObservableObject var TipCalculatorViewModel = TipCalculatorViewModel()
-
+    @ObservedObject var tipCalculatorViewModel = TipCalculatorViewModel()
+    
     var body: some View {
-
+        
         VStack {
             HStack{
                 Text("Total amount entered:")
                 Spacer()
                 Text("100") // Replace with $paymentObject.amount
             }.padding()
-
+            
             HStack{
                 Text("Tip percentage selected:")
                 Spacer()
@@ -32,25 +32,25 @@ struct ContentView: View {
             }
             .foregroundColor(.red)
             .padding()
-
+            
             HStack{
                 Text("Total amount with tip:")
                 Spacer()
-
+                
                 Text("\(totalAmount)")
             }
             .foregroundColor(.green)
             .padding()
-
+            
             TextField("Enter amount here", text: $totalAmount)
                 .keyboardType(.decimalPad) .textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-
+            
             Picker(selection: $tipPercentage, label: Text("Please select percentage you want to tip.")) {
                 ForEach(0 ..< tipPercentagesArray.count) {
-                   Text("\(self.tipPercentagesArray[$0])")
+                    Text("\(self.tipPercentagesArray[$0])")
                 }
             }.pickerStyle(SegmentedPickerStyle())
-            .padding()
+                .padding()
         }
     }
 }
