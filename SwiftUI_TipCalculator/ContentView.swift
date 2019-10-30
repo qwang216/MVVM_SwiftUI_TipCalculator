@@ -51,6 +51,13 @@ struct ContentView: View {
                 }
             }.pickerStyle(SegmentedPickerStyle())
                 .padding()
+            
+            Button(action: {
+                
+            }, label: {
+                Text("Clear")
+                })
+            
         }
     }
 }
