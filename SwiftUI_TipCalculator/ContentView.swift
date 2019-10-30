@@ -11,46 +11,44 @@ import SwiftUI
 struct ContentView: View {
     @State private var tipPercentage = 0
     @State private var totalAmount: String = ""
-    let tipPercentages = [10, 15, 20, 25, 0]
-    
+    let tipPercentagesArray = [0, 10, 15, 20, 25]
+
+    // Initialize MVVM object here like so
+    // @ObservableObject var TipCalculatorViewModel = TipCalculatorViewModel()
+
     var body: some View {
 
         VStack {
             HStack{
                 Text("Total amount entered:")
                 Spacer()
-                Text("100")
+                Text("100") // Replace with $paymentObject.amount
             }.padding()
-            
+
             HStack{
                 Text("Tip percentage selected:")
                 Spacer()
-                Text("0")
+                Text("\(tipPercentagesArray[tipPercentage])")
             }
             .foregroundColor(.red)
             .padding()
-            
+
             HStack{
                 Text("Total amount with tip:")
                 Spacer()
-                
-                Text("100")
+
+                Text("\(totalAmount)")
             }
             .foregroundColor(.green)
             .padding()
 
             TextField("Enter amount here", text: $totalAmount)
                 .keyboardType(.decimalPad) .textFieldStyle(RoundedBorderTextFieldStyle()).padding()
-            
+
             Picker(selection: $tipPercentage, label: Text("Please select percentage you want to tip.")) {
-                ForEach(tipPercentages, id: \.self) { eachTipPercentage in
-                    Text(String(eachTipPercentage))
+                ForEach(0 ..< tipPercentagesArray.count) {
+                   Text("\(self.tipPercentagesArray[$0])")
                 }
-//                Text("0%").tag(0)
-//                Text("10%").tag(1)
-//                Text("15%").tag(2)
-//                Text("18%").tag(3)
-//                Text("20%").tag(4)
             }.pickerStyle(SegmentedPickerStyle())
             .padding()
         }

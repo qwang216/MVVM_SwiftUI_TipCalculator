@@ -9,4 +9,11 @@
 import Combine
 import SwiftUI
 
-
+class TipCalculatorViewModel: ObservableObject {
+    @Published var amount: Int = 0
+    @Published var tipAmount: Int = 0
+    
+    func calculateTip() -> Int {
+        return 0
+    }
+}
