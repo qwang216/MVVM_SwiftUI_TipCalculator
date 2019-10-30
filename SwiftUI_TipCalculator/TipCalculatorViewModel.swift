@@ -10,17 +10,26 @@ import Combine
 import SwiftUI
 
 class TipCalculatorViewModel: ObservableObject {
-    @Published var amount: Double = 0      // bill is $100
-    @Published var tipAmount: Double = 0   // bill is $10 => %10
-    @Published var subTotal: Double = 0 // total is $110
-    @State var tipPercent: Double = 0
+    @Published var amount: String = ""      // bill is $100
+    @Published var tipIndex: Int = 0   // bill is $10 => %10
+    @Published var subTotal: Double = 0.0
+    let tipPercentagesArray = [0, 10, 15, 20, 25]
 
     func clearCalculator() {
-        amount = 0
-        tipAmount = 0
+        amount = ""
+        tipIndex = 0
     }
     
     func calculateTip() {
-        subTotal = amount + (amount * (tipPercent / 100))
+        guard let castedAmount = Double(amount) else {
+            return
+        }
+        subTotal = castedAmount + (castedAmount * (Double(tipPercentagesArray[tipIndex]) / 100))
     }
 }
+
+//struct Payment {
+//    var amount: String
+//    var tipIndex: Int
+//var subTotal: 
+//}
