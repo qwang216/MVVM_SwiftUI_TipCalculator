@@ -37,7 +37,7 @@ struct ContentView: View {
                 Text("Total amount with tip:")
                 Spacer()
                 
-                Text("\(totalAmount)")
+                Text("\(tipCalculatorViewModel.subTotal)")
             }
             .foregroundColor(.green)
             .padding()
@@ -45,7 +45,7 @@ struct ContentView: View {
             TextField("Enter amount here", text: $totalAmount)
                 .keyboardType(.decimalPad) .textFieldStyle(RoundedBorderTextFieldStyle()).padding()
             
-            Picker(selection: $tipPercentage, label: Text("Please select percentage you want to tip.")) {
+            Picker(selection: tipCalculatorViewModel.$tipPercent, label: Text("Please select percentage you want to tip.")) {
                 ForEach(0 ..< tipPercentagesArray.count) {
                     Text("\(self.tipPercentagesArray[$0])")
                 }
@@ -53,7 +53,7 @@ struct ContentView: View {
                 .padding()
             
             Button(action: {
-                
+                self.tipCalculatorViewModel.clearCalculator()
             }, label: {
                 Text("Clear")
                 })
