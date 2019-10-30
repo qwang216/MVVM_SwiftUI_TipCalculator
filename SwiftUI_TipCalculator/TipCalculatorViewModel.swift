@@ -28,8 +28,8 @@ class TipCalculatorViewModel: ObservableObject {
     }
 }
 
-//struct Payment {
+//struct Transaction {
 //    var amount: String
 //    var tipIndex: Int
-//var subTotal: 
+//    var subTotal:
 //}

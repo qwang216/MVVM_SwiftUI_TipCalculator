@@ -33,17 +33,20 @@ struct ContentView: View {
             }.pickerStyle(SegmentedPickerStyle())
                 .padding()
             
-            Button(action: {
-                self.tipCalculatorViewModel.clearCalculator()
-            }, label: {
-                Text("Clear")
-                })
+            HStack {
+                Button(action: {
+                    self.tipCalculatorViewModel.clearCalculator()
+                }, label: {
+                    Text("Clear")
+                    }).padding(40)
+                
+                Button(action: {
+                    self.tipCalculatorViewModel.calculateTip()
+                }, label: {
+                    Text("Calculate")
+                    }).padding(40)
+            }
             
-            Button(action: {
-                self.tipCalculatorViewModel.calculateTip()
-            }, label: {
-                Text("Calculate")
-                })
             
         }
     }
